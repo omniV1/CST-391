@@ -59,5 +59,5 @@ _Summary provided by instructor_
 
 ---
 # Diagrams 
-
+[Diagram folder](https://github.com/omniV1/CST-391/tree/main/docs/Milestone/Diagrams)
 
