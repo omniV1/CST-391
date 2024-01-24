@@ -18,7 +18,7 @@ _Summary provided by instructor_
 
 - We will use two javaScript Frameworks React and Angular both on an Express.js server. 
 
-![Project outline example flowchart ](https://gitlab.com/cst-3914/javascript-web-application-development/-/raw/main/Milestone/milestone1/UML%20/%20ER%20Diagrams/Cst-391_milestoneExampleFlowchart.png)
+![Project outline example flowchart ](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/Cst-391_milestoneExampleFlowchart.pngng)
 
 
 - our product should include properties with at least three different data types in the MySQL database. The web application should implement the abilities to list, create, read, update, and delete a "product.
