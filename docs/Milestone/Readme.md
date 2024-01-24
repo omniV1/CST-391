@@ -55,9 +55,41 @@ _Summary provided by instructor_
 - as a user I want to be able to select a color and have that color of gamecube become visable on the screen, so that I can purchase one based off my favorite color. 
 
 
-- as a user I want to be able to email to business so that I can ensure they have gotten my device for repair/ modification services. 
+- as a user I want to be able to email to business so that I can ensure they have gotten my device for repair/ modification services.
+- 
 
 ---
 # Diagrams 
-[Diagram folder](https://github.com/omniV1/CST-391/tree/main/docs/Milestone/Diagrams)
+
+### ER diagram 
+![ER](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CST-391-ERDiagram.png)
+
+---
+
+### UML DIAGRAMS
+
+![Services UML](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CST391-ServicesUML-Milestone1.drawio.png)
+
+![Shopping Cart UML](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CST391-ShoppingCartUML-Milestone1.drawio%20(1).png)
+
+![GameCube UML](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/GameCube-Class.drawio.png)
+
+---
+
+### Wire frames 
+
+![page 1](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/Cst391-Wireframe-page-1.drawio.png)
+
+![page 2](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CSt391-Wirefram-Page2.drawio.png)
+
+![page 3](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CSt391-Wireframe-Page3.drawio.png)
+
+![page 4](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/CSt391-Wireframe-Page4.drawio.png)
+
+---
+
+### Site map
+
+![Site map](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/Cst-391-Sitemap-Milestone1.drawio.png)
+
 
