@@ -57,7 +57,7 @@ _Summary provided by instructor_
 
 
 - as a user I want to be able to email to business so that I can ensure they have gotten my device for repair/ modification services.
-- 
+ 
 
 ---
 # Diagrams 
