@@ -1,6 +1,6 @@
 // To use environment variables
 import dotenv from 'dotenv';
-dotenv.config({ path: 'MusicAPI/.env' });
+dotenv.config();
 
 // Print the environment variable to the console
 console.log(process.env.GREETING);  // This should print: Hello from the environment file. Be kind to the environment!
