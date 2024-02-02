@@ -1,30 +1,30 @@
-// To use environment variables
-import dotenv from 'dotenv';
-dotenv.config();
+import express from 'express'; 
+import albumsRouter from './albums/albums.routes'; 
+import artistsRouter from './artists/artists.routes'; 
+import logger from './middleware/logger.middleware'; 
 
-// Print the environment variable to the console
-console.log(process.env.GREETING);  // This should print: Hello from the environment file. Be kind to the environment!
+const app = express(); 
+const port = 3000;
 
-// Importing the express module and specific types from 'express'
-import express, { Request, Response } from 'express';
+// Middlewares to parse JSON and URL-encoded bodies should come first
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Creating an instance of express
-const app = express();
+// Logger middleware
+if (process.env.NODE_ENV === 'development') {
+    app.use(logger);
+    console.log(process.env.GREETING + ' in dev mode');
+}
 
-// The port number will now be taken from the environment variables if defined
-const port = process.env.PORT || 9991; // Fallback to 9991 if the environment variable is not defined
+app.get('/', (req, res) => {
+    res.send('Welcome to my music API!');
+  });
 
-// Handling GET requests to the root ('/') URL
-// req represents the request object, res represents the response object
-app.get('/', (req: Request, res: Response) => {
-    // Sending a text response 'Hello World from TypeScript!' to the client
-    res.send('Hello World from TypeScript!');
-});
+
+// Routers
+app.use('/', [albumsRouter, artistsRouter]);
 
 // Starting the server on the specified port
-// The listen method takes the port number and an optional callback function
 app.listen(port, () => {
-    // This callback function is executed once the server starts listening
-    // Logging the URL where the server is listening
     console.log(`Example app listening at http://localhost:${port}`);
 });
