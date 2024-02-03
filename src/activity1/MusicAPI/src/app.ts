@@ -1,6 +1,7 @@
 import express, { Request, Response } from 'express';
 import albumsRouter from './albums/albums.routes'; 
-import artistsRouter from './artists/artists.routes'; 
+import artistsRouter from './artists/artists.routes';
+
 import logger from './middleware/logger.middleware'; 
 import helmet from 'helmet';
 import dotenv from "dotenv"; 
@@ -36,7 +37,7 @@ app.get('/', (req: Request, res: Response) => {
     res.send('<h1>Welcome to the Music API<h1/>');
 }); 
 // adding router middleware
-app.use('/', [albumsRouter , artistsRouter] ); 
+app.use('/', [albumsRouter , artistsRouter ] ); 
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);

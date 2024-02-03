@@ -10,7 +10,7 @@ const initializeMySqlConnector = () => {
             user: process.env.MY_SQL_DB_USER || 'root',
             password: process.env.MY_SQL_DB_PASSWORD || 'root',
             database: process.env.MY_SQL_DB_DATABASE || 'music',
-            socketPath: process.env.MY_SQL_DB_SOCKET || '\\\\.\\pipe\\mysql\\mysql.sock', 
+            
         });
     
         console.debug('Mysql Adapter pool generated successfully');
@@ -18,16 +18,16 @@ const initializeMySqlConnector = () => {
 
         pool.getConnection((err, connection) => {
             if (err) {
-                console.log('error mysql failed to connect');
-                throw new Error('not able to connect to the database');
+                console.error('Error connecting to MySQL:', err);
+                throw new Error('Failed to connect to the database');
             } else {
-                console.log('connection made');
+                console.log('Connected to MySQL');
                 connection.release();
             }
         });
     } catch (error) {
         console.error('[mysql.connector][initializeMySqlConnector][Error]: ', error);
-        throw new Error('failed to initialize pool');
+        throw new Error('Failed to initialize pool');
     }
 };
 

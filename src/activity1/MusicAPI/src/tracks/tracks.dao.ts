@@ -11,5 +11,6 @@ export const createTracks = async (track: Track, albumId: number): Promise<void>
 };
 
 export const updateTrack = async (track: Track): Promise<void> => {
-  return execute<void>(trackQueries.updateTracks, [track.title, track.number, track.video, track.lyrics]);
-};
+    return execute<void>(trackQueries.updateTracks, [track.title, track.number, track.video, track.lyrics, track.trackId]);
+  };
+  
