@@ -1,30 +1,43 @@
-import express from 'express'; 
+import express, { Request, Response } from 'express';
 import albumsRouter from './albums/albums.routes'; 
 import artistsRouter from './artists/artists.routes'; 
 import logger from './middleware/logger.middleware'; 
+import helmet from 'helmet';
+import dotenv from "dotenv"; 
+import cors from 'cors';
+
+dotenv.config();
 
 const app = express(); 
-const port = 3000;
+const port = process.env.PORT; 
 
-// Middlewares to parse JSON and URL-encoded bodies should come first
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// enable all CORS request 
+app.use(cors()); 
 
-// Logger middleware
-if (process.env.NODE_ENV === 'development') {
-    app.use(logger);
-    console.log(process.env.GREETING + ' in dev mode');
+// Parse JSON bodies
+app.use(express.urlencoded({extended: true})); 
+
+// adding set of security middleware
+app.use(helmet()); 
+
+console.log(process.env.MY_SQL_DB_HOST); 
+
+//MySQlConnector.initializeMySqlConnector(); 
+
+if (process.env.NODE_ENV == 'development') {
+    //add logger middleware
+    app.use(logger); 
+    console.log(process.env.GREETING + ' in dev mode')
 }
 
-app.get('/', (req, res) => {
-    res.send('Welcome to my music API!');
-  });
+// Application routes
+// root route 
+app.get('/', (req: Request, res: Response) => {
+    res.send('<h1>Welcome to the Music API<h1/>');
+}); 
+// adding router middleware
+app.use('/', [albumsRouter , artistsRouter] ); 
 
-
-// Routers
-app.use('/', [albumsRouter, artistsRouter]);
-
-// Starting the server on the specified port
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
 });

@@ -2,10 +2,10 @@ import { Request, Response, NextFunction } from 'express';
 import { v4 as uuidv4 } from 'uuid'; 
 // import chalk from 'chalk' 
 
-const getProcessingTimeInMS = (time: [number, number]): string => 
-{
-    return '${(time[0] * 1000 + time[1] / 1e6).toFixed(2)}ms'
-}
+const getProcessingTimeInMS = (time: [number, number]): string => {
+  return `${(time[0] * 1000 + time[1] / 1e6).toFixed(2)}ms`;
+};
+
 
 
 export default function logger(req: Request, res: Response, next: NextFunction) {

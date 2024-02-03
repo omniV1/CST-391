@@ -1,10 +1,15 @@
-import { Request, Response } from "express";
+import { Request, RequestHandler, Response } from 'express'; 
+import * as ArtistDao from './artists.dao'; 
 
-const ARTISTS = [
+export const readArtists: RequestHandler = async (req: Request, res: Response) => {
+    try { 
+        const artists = await ArtistDao.readArtists(); 
 
-    { id: 1, name: "Porter Robinson" }
-
-]; 
-export const getArtists = (req: Request, res: Response) => {
-    res.send(ARTISTS); 
-}
+        res.status(200).json(artists); 
+    } catch (error) { 
+        console.error('[artists.controller][ReadArtists][Error] ' , error); 
+        res.status(500).json({
+            message: 'There was an error when fetching artists'
+        }); 
+    }
+}; 

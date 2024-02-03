@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/mysql": "^2.15.25"
+  }
+}
