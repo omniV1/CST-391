@@ -1,7 +1,7 @@
 import { OkPacket } from "mysql";
 import { execute } from "../services/mysql.connector";
 import { Album } from "./albums.model";
-import { albumQueries } from './albumsQueries'; 
+import { albumQueries } from './albums.queries'; 
 
 export const readAlbumns = async () => { 
     return execute<Album[]>(albumQueries.readAlbums, []); 

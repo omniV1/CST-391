@@ -6,7 +6,7 @@ const initializeMySqlConnector = () => {
         pool = createPool({
             connectionLimit: parseInt(process.env.MY_SQL_DB_CONNECTION_LIMIT || '10'),
             port: parseInt(process.env.MY_SQL_DB_PORT || '3306'),
-            host: process.env.MY_SQL_DB_HOST || 'localhost',
+            host: process.env.MY_SQL_DB_HOST || '127.0.0.1',
             user: process.env.MY_SQL_DB_USER || 'root',
             password: process.env.MY_SQL_DB_PASSWORD || 'root',
             database: process.env.MY_SQL_DB_DATABASE || 'music',

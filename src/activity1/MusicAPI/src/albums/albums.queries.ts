@@ -1,4 +1,3 @@
-import { readAlbumsByArtist } from "./albums.dao"
 
 export const albumQueries = { 
     readAlbums: `
@@ -11,12 +10,14 @@ export const albumQueries = {
     id as albumId, title AS title, artist AS artist, description AS description, year AS year, image AS image
     FROM music.albums
     WHERE music.albums.artist = ? `, 
-    readAlbumnsByArtistSearch: ` 
+    
+    readAlbumnsByArtistSearch: `
     SELECT 
     id as albumId, title AS title, artist AS artist, description AS description, year AS year, image AS image
     FROM music.albums
-    WHERE music.albums.artist LIKE ?
-    `, 
+    WHERE music.albums.artist LIKE ? 
+    `,
+
     readAlbumnsByDescriptionSearch: `
     SELECT 
     id as albumId, title AS title, artist AS artist, description AS description, year AS year, image AS image

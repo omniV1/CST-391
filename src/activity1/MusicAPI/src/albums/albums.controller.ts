@@ -28,21 +28,21 @@ const albums = await AlbumDao.readAlbumsByArtist(req.params.artist);
 export const readAlbumsByArtistSearch: RequestHandler = async (req: Request, res: Response) => { 
   try { 
     console.log('search', req.params.search); 
-    
+
+    // Using parameterized query
     const albums = await AlbumDao.readAlbumsByArtistSearch('%' + req.params.search + '%'); 
 
     await readTracks(albums, res); 
 
-    res.status(200).json ( 
-      albums
-    ); 
+    res.status(200).json(albums); 
   } catch (error) { 
     console.error('[albums.controller][readAlbums][Error] ', error); 
     res.status(500).json({
-      message: 'There was an error when fethching albums'
+      message: 'There was an error when fetching albums'
     });
   }    
 };
+
 
 export const readAlbumsByAlbumDescriptionSearch: RequestHandler = async (req: Request, res: Response) => { 
   try{ 

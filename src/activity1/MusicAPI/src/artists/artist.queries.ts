@@ -1,7 +1,7 @@
 export const artistQueries = { 
     readArtists: `
     SELECT
-    DISTINCT artists as artists
+    DISTINCT artist as artists
     FROM music.albums
     `
 }
