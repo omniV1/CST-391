@@ -1,7 +1,6 @@
 import express, { Request, Response } from 'express';
 import albumsRouter from './albums/albums.routes'; 
 import artistsRouter from './artists/artists.routes';
-
 import logger from './middleware/logger.middleware'; 
 import helmet from 'helmet';
 import dotenv from "dotenv"; 
