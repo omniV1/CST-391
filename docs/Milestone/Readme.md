@@ -7,6 +7,8 @@ _All work is my own_
 
 _Summary provided by instructor_ 
 
+
+- instructor noted that the milestone proposal looked well defined
 ---
 **Summary**
 
@@ -59,6 +61,34 @@ _Summary provided by instructor_
 - as a user I want to be able to email to business so that I can ensure they have gotten my device for repair/ modification services.
  
 
+---
+
+### Rest API 
+
+- Get All GameCubes
+  - Endpoint: /gamecubes
+  - HTTP Method: GET
+  - Description: Retrieve a list of all GameCubes available in the store.
+
+- Get a Specific GameCube
+  - Endpoint: /gamecubes/{gameCubeId}
+  - HTTP Method: GET
+  - Description: Retrieve details of a specific GameCube identified by its unique ID.
+
+- Add a New GameCube
+  - Endpoint: /gamecubes
+  - HTTP Method: POST
+  - Description: Add a new GameCube to the store's inventory. The request body should contain the details of the new GameCube.
+
+- Update a GameCube
+  - Endpoint: /gamecubes/{gameCubeId}
+  - HTTP Method: PUT
+  - Description: Update the details of a specific GameCube identified by its unique ID. The request body should contain the updated information.
+
+- Remove a GameCube
+  - Endpoint: /gamecubes/{gameCubeId}
+  - HTTP Method: DELETE
+  - Description: Remove a specific GameCube from the store's inventory identified by its unique ID.
 ---
 # Diagrams 
 
