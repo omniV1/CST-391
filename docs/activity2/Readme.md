@@ -1,5 +1,11 @@
 # Angular Project Structure Overview
 
+### Owen Lindsey
+### CST-391
+### This work was done with help from the assignment guide
+
+---
+
 This document serves as a guide to understand the structure of an Angular project and the purpose of its key files and directories.
 
 ## Directory Structure
