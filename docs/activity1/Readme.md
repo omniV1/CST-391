@@ -35,7 +35,7 @@
 ![passed postman tests](https://github.com/omniV1/CST-391/blob/main/docs/activity1/screenshots/Passed.png)
 
 
-![failed postman tests](C:\git\CST-391\docs\activity1\screenshots\Failed.png)
+![failed postman tests](https://github.com/omniV1/CST-391/blob/main/docs/activity1/screenshots/Failed.png)
 
 ![apps.ts](C:\git\CST-391\docs\activity1\screenshots\app.ts.png)
 
