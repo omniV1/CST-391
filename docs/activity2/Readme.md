@@ -1,4 +1,4 @@
-### Angular Project Structure Overview
+# Angular Project Structure Overview
 
 ##### Owen Lindsey
 
