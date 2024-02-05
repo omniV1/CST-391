@@ -43,11 +43,15 @@ _Summary provided by instructor_
 | Milestone 1 |  For Milestone 1, you will create a project proposal that defines the functionality for the complete web application.      | Diagrams- hold all uml / wireframes / UI site maps/ UI wireframes / ER diagrams |
 
 ---
-# Description
 
-- I want to develope a web application that will act as a store front for my buisness. The buisness will sell modified gamecubes with various modification such as raspberry pi installation, cubeboot software modification etc. The business will also offer services for individuals to select modifications and send their personal gamecubes to me so I can then install them for a fraction of the cost. 
+### Description
+
+- I want to develope a web application that will act as a store front for my buisness. The buisness will sell modified gamecubes with various modification such as raspberry pi installation, cubeboot software modification etc. The business will also offer services for individuals to select modifications and send their personal gamecubes to me so I can then install them for a fraction of the cost.
+
+  
 ---
-# List of requirements:
+
+### List of requirements:
 
   
 - as a user I want to add items to a shopping cart so that I can buy items from the store.
