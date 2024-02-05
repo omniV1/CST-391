@@ -1,8 +1,8 @@
 ### Angular Project Structure Overview
 
-### Owen Lindsey
-### CST-391
-### This work was done with help from the assignment guide
+##### Owen Lindsey
+##### CST-391
+###### This work was done with help from the assignment guide
 
 ---
 
