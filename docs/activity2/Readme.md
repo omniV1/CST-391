@@ -75,3 +75,17 @@ The `main.ts` file is the entry point for your Angular app. It's responsible for
 
 ### `app.module.ts`
 The `app.module.ts` file is the root module of the application. It's where you tell Angular about other components and modules that the app depends on.
+
+---
+
+### Screenshots 
+
+![Terminal showing Angular version](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angular_version.png)
+
+![h3 element added](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-h3.png)
+
+![app-inital](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-initial.png)
+
+
+![App Message modifcation](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-message.png)
+
