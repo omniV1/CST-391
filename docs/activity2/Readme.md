@@ -80,19 +80,19 @@ The `app.module.ts` file is the root module of the application. It's where you t
 
 ### Screenshots 
 
-- Terminal showing Angular version.
+1. Terminal showing Angular version.
 
 ![Terminal showing Angular version](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angular_version.png)
 
--app inital structure.
+1. app inital structure.
 
 ![app-inital](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-initial.png)d
 
-- h3 element added.
+1. h3 element added.
   
 ![h3 element added](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-h3.png)
 
-- App message modifaction.
+1. App message modifaction.
 
 ![App Message modifcation](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-message.png)
 
