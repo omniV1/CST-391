@@ -1,5 +1,13 @@
 # Angular Project Structure Overview
 
+##### Owen Lindsey
+
+##### CST-391
+
+###### This work was done with help from the assignment guide
+
+---
+
 This document serves as a guide to understand the structure of an Angular project and the purpose of its key files and directories.
 
 ## Directory Structure
@@ -67,3 +75,30 @@ The `main.ts` file is the entry point for your Angular app. It's responsible for
 
 ### `app.module.ts`
 The `app.module.ts` file is the root module of the application. It's where you tell Angular about other components and modules that the app depends on.
+
+
+### Screenshots 
+
+---
+
+1. **Terminal showing Angular version.**
+
+![Terminal showing Angular version](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angular_version.png)
+
+
+2. **app inital page structure before editing the app.component.ts.**
+
+![app-inital](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-initial.png)
+
+
+3. **h3 element added to the app.component.ts file.**
+   
+  
+![h3 element added](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-h3.png)
+
+
+4. **App message modifaction to the app.component.ts.**
+   
+
+![App Message modifcation](https://github.com/omniV1/CST-391/blob/main/docs/activity2/screenshots/angularapp-message.png)
+

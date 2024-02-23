@@ -94,6 +94,9 @@ _Summary provided by instructor_
   - HTTP Method: DELETE
   - Description: Remove a specific GameCube from the store's inventory identified by its unique ID.
 ---
+
+### Postman API documentation: https://documenter.getpostman.com/view/32764813/2sA2rCU2Sb
+
 # Diagrams 
 
 ### ER diagram 
