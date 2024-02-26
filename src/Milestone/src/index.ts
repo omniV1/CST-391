@@ -14,10 +14,10 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`listening at http://localhost:${port}`);
 });
 
-// CREATE (POST)
+// CREATE 
 app.post('/gamecubes', async (req, res) => {
     // Assuming you are receiving modelNumber in the request body
     const { description, price, color, quantity, modelNumber } = req.body;
@@ -37,7 +37,7 @@ app.post('/gamecubes', async (req, res) => {
     }
 });
 
-// READ (GET)
+// READ 
 app.get('/gamecubes/:id', async (req, res) => {
     const { id } = req.params;
     try {
@@ -58,8 +58,20 @@ app.get('/gamecubes/:id', async (req, res) => {
       }
     }
   });
-  
-// PUT (UPDATE)
+// READ ALL
+app.get('/gamecubes', async (req, res) => {
+  try {
+    const [rows] = await connection.query('SELECT * FROM gamecubes');
+    res.json(rows);
+  } catch (error: unknown) { // Specify that error is of type unknown
+    if (error instanceof Error) {
+      res.status(500).send('Error while retrieving gamecubes: ' + error.message);
+    } else {
+      res.status(500).send('An unknown error occurred');
+    }
+  }
+});
+// UPDATE
 app.put('/gamecubes/:id', async (req, res) => {
     const { id } = req.params;
     const { description, price, color, modelNumber, quantity } = req.body;
