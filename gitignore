@@ -1,0 +1,10 @@
+# Ignore build artifacts
+dist/
+build/
+
+# Ignore node_modules directory
+node_modules/
+
+# Ignore logs and temporary files
+*.log
+*.tmp
