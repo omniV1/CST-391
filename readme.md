@@ -5,7 +5,6 @@
 ### **src**: contains all src code for all activites and milestone
 
 
-# Activities / Milestone overview 
 | Activity                              | Description                                                                                                                                                           |
 |---------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **Activity 0:**                       |                                                                                                                                                                       |
@@ -13,11 +12,13 @@
 | Express/NodeJS Hello World           | Implementing an Express/NodeJS server to serve "Hello World" text.                                                                                                     |
 | NodeJS with TypeScript               | Exploring NodeJS development with TypeScript.                                                                                                                         |
 | Installing node -v and npm -v        | Confirming Node.js and npm installation.                                                                                                                              |
+
 | **Activity 1:**                       |                                                                                                                                                                       |
 | Routes Declared                      | Defining CRUD routes for artists and albums in Express.                                                                                                                |
 | Postman Tests                        | Conducting Postman tests to verify route functionality.                                                                                                                |
 | Code Implementation                  | Implementing routes and controller actions.                                                                                                                            |
 | Documentation                        | Providing documentation for each route.                                                                                                                                |
+
 | **Activity 2:**                       |                                                                                                                                                                       |
 | Installation of Angular CLI          | Installing Angular CLI and verifying the version.                                                                                                                      |
 | Creation of Test Application         | Creating a test Angular app with routing and CSS options.                                                                                                              |
@@ -25,17 +26,19 @@
 | Running the Application              | Starting the Node server and opening the app in a browser.                                                                                                             |
 | Modifying Component Files            | Updating the app component and adding new member variables.                                                                                                            |
 | Research                             | Describing the Angular project structure and default page generation.                                                                                                  |
+
 | **Activity 3:**                       |                                                                                                                                                                       |
 | Basic Angular Components             | Creating a simple Angular app with Bootstrap integration.                                                                                                              |
 | Simple Data Binding                  | Implementing data binding and form handling.                                                                                                                           |
 | Building a New Component             | Generating a new component demonstrating 2-way data binding.                                                                                                           |
 | Research                             | Explaining the usage of Angular decorators and directives.                                                                                                             |
+
 | **Activity 4:**                       |                                                                                                                                                                       |
 | Create a Copy of Music Application   | Copying the existing Music app for further modifications.                                                                                                              |
 | Add HTTP Client Module               | Importing HttpClientModule for HTTP client functionality.                                                                                                               |
 | Refactor Music Service               | Refactoring the service to use HttpClient for live data fetching.                                                                                                       |
 | Research                             | Recommending research on Angular app state maintenance.                                                                                                                |
-|
+
 | **Milestone 3 - Rest API:**          |                                                                                                                                                                       |
 | Project Proposal                     | Providing a detailed project description, requirements, and REST API specifications.                                                                                   |
 | Postman API Documentation           | Creating detailed API documentation for interacting with the app.                                                                                                      |
