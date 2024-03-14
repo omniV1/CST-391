@@ -1,59 +1,62 @@
+// Core Angular imports for component functionality
 import { Component, OnInit } from '@angular/core';
+// Importing model classes for strong typing and structure
 import { Album } from '../models/Album';
 import { Track } from '../models/Track';
+// Importing a service that handles data operations for music albums
 import { MusicServiceService } from '../service/music-service.service';
 
-// The @Component decorator indicates that this class is an Angular component.
-// It includes metadata such as the component's selector, template file, and styles.
 @Component({
-	selector: 'app-create-album', // The component's custom HTML tag
-	templateUrl: './create-album.component.html', // The location of the component's template file
-	styleUrls: ['./create-album.component.css'], // The location of the component's styles
+	selector: 'app-create-album', // Defines the custom HTML tag for this component.
+	templateUrl: './create-album.component.html', // Specifies the HTML template for the component.
+	styleUrls: ['./create-album.component.css'], // Specifies the CSS styles for the component.
 })
 export class CreateAlbumComponent implements OnInit {
-    // The album property is initialized with a new Album object.
-    // A random ID is generated for the new album.
+	// Initializing a new Album object to collect user input from the form.
+	// A random ID is generated to uniquely identify the new album.
 	album: Album = new Album(Math.floor(Math.random() * 1000000), '', '', '', 0, '', []);
-    
-    // This property will hold the raw string input for tracks from the user.
+
+	// Holds the user input for tracks in a raw string format before parsing.
 	tracksRaw: string = '';
 
-    // This flag indicates whether the album submission has been attempted.
+	// Flag to indicate whether the album submission form has been submitted.
 	wasSubmitted: boolean = false;
 
-    // Injecting the MusicServiceService into the component for album creation functionality.
+	// Injecting the music service to handle album creation.
 	constructor(private service: MusicServiceService) { }
 
-    // ngOnInit is a lifecycle hook for additional initialization tasks.
+	// Lifecycle hook for initialization. No specific actions are performed on component initialization in this case.
 	ngOnInit() { }
 
-    // This method handles the form submission event.
+	// Handles the submission of the album creation form.
 	public onSubmit() {
-        // Parsing the raw track data input by the user into Track objects.
+		// Parses the raw track data from the form into an array of Track objects.
 		const tracks: Track[] = this.parseTracks(this.tracksRaw);
 
-        // Assigning the parsed tracks to the album's Tracks property.
+		// Assigns the parsed tracks to the album's Tracks property.
 		this.album.Tracks = tracks;
 
-        // Calling the service to create a new album with the current album data.
+		// Uses the injected service to create the album with the provided data.
 		const status = this.service.createAlbum(this.album);
 
-        // Logging the status of the album creation.
+		// Logs the result of the album creation operation.
 		console.log('The return from createAlbum() was ' + status);
 
-        // Setting the wasSubmitted flag to true to indicate that the form was submitted.
+		// Sets the submission flag to true, which can be used to show feedback or navigate away.
 		this.wasSubmitted = true;
 	}
 
-    // This method parses the raw string of tracks into an array of Track objects.
+	// Parses a raw string of track data into an array of Track objects.
 	private parseTracks(rawTracks: string): Track[] {
 		const tracks: Track[] = [];
+		// Splits the raw string into lines, each line representing a track.
 		const lines = rawTracks.split('\n');
 
-        // For each line in the rawTracks string, a new Track object is created.
+		// Iterates over each line, creating a new Track object from the data.
 		lines.forEach((line, index) => {
+			// Splits the line into components based on a delimiter (':') and assigns each to a variable.
 			const [title, lyrics, video] = line.split(':');
-            // Pushing a new Track object to the tracks array with a random ID and track number based on the line index.
+			// Creates and adds a new Track object to the tracks array with a unique ID and the parsed data.
 			tracks.push(new Track(Math.floor(Math.random() * 1000000), index + 1, title, lyrics || '', video || ''));
 		});
 

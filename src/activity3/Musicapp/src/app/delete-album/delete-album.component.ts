@@ -1,52 +1,57 @@
+// Angular core imports for component definition and lifecycle hooks.
 import { Component, OnInit } from '@angular/core';
+// Imports for handling routing within the Angular application.
 import { ActivatedRoute, Router } from '@angular/router';
+// Custom service for music data operations.
 import { MusicServiceService } from '../service/music-service.service';
 
-// The @Component decorator provides the Angular metadata for the DeleteAlbumComponent.
 @Component({
-  selector: 'app-delete-album', // The HTML tag for this component.
-  templateUrl: './delete-album.component.html', // The HTML layout for this component.
-  styleUrls: ['./delete-album.component.css'] // The CSS styling for this component.
+  selector: 'app-delete-album', // The custom element tag to represent this component in HTML.
+  templateUrl: './delete-album.component.html', // The HTML template file associated with this component.
+  styleUrls: ['./delete-album.component.css'] // The CSS styles specific to this component.
 })
 export class DeleteAlbumComponent implements OnInit {
-  // Properties indicating the state of the deletion process.
-  isDeleting: boolean = false;
-  isDeleted: boolean = false;
-  deleteError: boolean = false;
+  // Flags to track the state of the deletion process.
+  isDeleting: boolean = false; // Indicates if the deletion process is currently happening.
+  isDeleted: boolean = false; // Indicates if the album has been successfully deleted.
+  deleteError: boolean = false; // Indicates if there was an error during the deletion process.
 
-  // The constructor injects services for use in the component.
+  // Injecting necessary services via the constructor.
   constructor(
-    private route: ActivatedRoute, // Provides access to information about a route associated with the component.
-    private musicService: MusicServiceService, // Provides the music service for operations.
-    private router: Router // Provides the navigation functionality.
+    private route: ActivatedRoute, // To access route parameters.
+    private musicService: MusicServiceService, // To call deletion logic on the music service.
+    private router: Router // To navigate to another route upon successful deletion.
   ) { }
 
-  // Angular's ngOnInit lifecycle hook for initialization logic.
   ngOnInit() {
-    // Extract the 'artist' and 'id' parameters from the current route.
+    // Retrieving the 'artist' and 'id' from the route parameters.
     const artist = this.route.snapshot.paramMap.get('artist');
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    
-    // Check for the presence of 'artist' and 'id' and proceed to delete the album if both are available.
+
+    // Ensures that both 'artist' and 'id' are present before proceeding with deletion.
     if (artist && id) {
       this.deleteAlbum(id, artist);
     }
   }
+
+  // Method to handle the deletion of an album.
   deleteAlbum(id: number, artist: string) {
-    this.isDeleting = true;
+    this.isDeleting = true; // Marks the beginning of the deletion process.
+    // Calls the musicService to delete the album by its id and artist.
     const result = this.musicService.deleteAlbum(id, artist);
-    this.isDeleting = false;
+    // Once the service call is complete, update the deletion status flags accordingly.
+    this.isDeleting = false; // Marks the end of the deletion process.
     
-    // Check if deletion was successful
     if (result === 0) {
+      // If the album was successfully deleted, set the flag and log a success message.
       this.isDeleted = true;
       console.log('Album successfully deleted');
+      // After a delay, navigate to the list-albums page.
       setTimeout(() => this.router.navigate(['/list-albums']), 2000);
     } else {
-      // Handle the case where deletion failed
+      // If deletion failed, set the error flag and log an error message.
       this.deleteError = true;
       console.log('Error deleting album');
     }
   }
-  
 }
