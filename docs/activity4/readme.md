@@ -20,16 +20,20 @@ The execution of this assignment was carried out according to the specified guid
 ### Captioned Screenshots:
 
 - **Main Application Screen:**
-  `![Main Application Screen](./path/to/main_application.png "Main Application Screen")`
-- **Artist List Screen:**
-  `![Artist List Screen](./path/to/artist_list.png "Artist List Screen")`
-- **Album List Screen:**
-  `![Album List Screen](./path/to/album_list.png "Album List Screen")`
-- **Album Display Screen:**
-  `![Album Display Screen](./path/to/album_display.png "Album Display Screen")`
-- **Add Album Screen:**
-  `![Add Album Screen](./path/to/add_album.png "Add Album Screen")`
+  ![Main Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/main-screen.png)
 
+- **Artist List Screen:**
+  ![Artist List](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/artist-list.png)
+  
+- **Album List Screen:**
+ ![Album List](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/album-list.png)
+
+- **Album Display Screen:**
+![Album Display](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/album-display.png)
+
+- **Add Album Screen:**
+ ![Create Album Initial](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/create-album-inital.png)
+ ![Create Album POST](https://github.com/omniV1/CST-391/blob/main/docs/activity4/screenshots/create-album-POST.png)
 
 ## Research
 
