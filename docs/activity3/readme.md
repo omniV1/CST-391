@@ -34,10 +34,11 @@ Screenshots
 Below are screenshots demonstrating the responsiveness of the Bootstrap grid layout along with the page showing our components:
 
 Small Screen:
-
+![Small Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/small_screen.png)
 
 Large Screen:
-
+https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/bigs_screen.png
+![Large Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/bigs_screen.png)
 
 
 # Research
@@ -121,19 +122,22 @@ We executed this assignment according to the following guidelines:
 
 9. **Captioned Screenshots:**
    a. Initial application page 
+![Initial Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/initial_screen.png)
 
    b. GCU homepage
-
+ ![GCU Homepage](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/gcu_homepage.png)
 
    c. Create Album page
-
+![Create Album](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/create_album.png)
 
    d. Artist List page showing the added album/artist
-
+![Artists List](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/artsits_list.png)
    
    e. About Box:
+![About Box](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/about_box.png)
 
-10. **Research Questions:**
+
+11. **Research Questions:**
 - Complete comments for `music-service.service.ts` providing detailed explanations of each method and its functionality.
   
   - [Link to music-service.service.ts](https://github.com/omniV1/CST-391/blob/main/src/activity3/Musicapp/src/app/service/music-service.service.ts)
