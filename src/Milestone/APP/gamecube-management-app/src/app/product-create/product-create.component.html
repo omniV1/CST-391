@@ -1,0 +1,10 @@
+<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="description">Description</label>
+    <input type="text" id="description" class="form-control" formControlName="description">
+  </div>
+
+  <!-- Add other fields similarly -->
+
+  <button type="submit" class="btn btn-success" [disabled]="!productForm.valid">Create</button>
+</form>

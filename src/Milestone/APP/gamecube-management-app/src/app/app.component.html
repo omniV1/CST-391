@@ -1,0 +1,31 @@
+<!-- Main container wrapping the content, providing margin and padding according to the Bootstrap 'container' class -->
+<div class="container mt-3">
+  <!-- Dynamic header displaying the application's title -->
+  <h1>Welcome to {{ title }}</h1>
+
+  <!-- Navigation bar section styled with Bootstrap classes for a light-colored theme and responsiveness -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Brand/logo -->
+    <a class="navbar-brand" href="#">GameCube Management</a>
+    <!-- Toggle button for mobile view -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar content -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <!-- Link to product list -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products" routerLinkActive="active">Products</a>
+        </li>
+        <!-- Link to create a new product -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/products/new">Create Product</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Angular Router Outlet for dynamic content based on routing -->
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,16 @@
+<div *ngIf="gameCube; else loading">
+    <h2>GameCube Details</h2>
+    <div><strong>Description:</strong> {{ gameCube.description }}</div>
+    <div><strong>Price:</strong> ${{ gameCube.price }}</div>
+    <div><strong>Color:</strong> {{ gameCube.color }}</div>
+    <div><strong>Quantity:</strong> {{ gameCube.quantity }}</div>
+    <div><strong>Model Number:</strong> {{ gameCube.modelNumber }}</div>
+    <div class="mt-3">
+      <button class="btn btn-primary" (click)="goBack()">Back to List</button>
+      <button [routerLink]="['/products', gameCube.id, 'edit']">Edit</button>
+    </div>
+  </div>
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
+  
