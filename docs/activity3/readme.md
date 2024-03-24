@@ -37,7 +37,6 @@ Small Screen:
 ![Small Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/small_screen.png)
 
 Large Screen:
-https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/bigs_screen.png
 ![Large Screen](https://github.com/omniV1/CST-391/blob/main/docs/activity3/Screenshots/bigs_screen.png)
 
 
