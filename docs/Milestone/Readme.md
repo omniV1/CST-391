@@ -133,3 +133,70 @@ _Summary provided by instructor_
 ![Site map](https://github.com/omniV1/CST-391/blob/main/docs/Milestone/Diagrams/Cst-391-Sitemap-Milestone1.drawio.png)
 
 
+# Updates for Milestone 4: 
+## Updates Summary
+
+| Feature                 | Status     | Description                                               |
+|-------------------------|------------|-----------------------------------------------------------|
+| CRUD Operations         | Completed  | Implemented functionality to list, create, read, update, and delete a "product". |
+| Navigation              | Completed  | Utilized application navigation and Bootstrap NavBar. |
+
+## Known Issues
+
+No known issues at the moment.
+
+## Challenges Encountered
+
+1. **Route Matching**: Encountered challenges with route matching, leading to navigation errors. Resolved by ensuring correct route configurations.
+2. **Integration with Backend**: Initial difficulties in integrating frontend with backend API due to mismatched URL endpoints. Addressed by aligning frontend API calls with backend routes.
+
+## Pending Bugs/Issues
+
+currently my routes are in error: 
+
+## Lessons Learned
+
+1. **Consistent API Configuration**: Ensured consistency between frontend and backend API configurations to avoid communication errors.
+2. **Effective Debugging**: Learned the importance of thorough debugging techniques for identifying and resolving issues promptly.
+3. **Angular Routing**: Gained a deeper understanding of Angular routing and navigation mechanisms.
+4. **API Documentation**: Acknowledged the significance of well-documented APIs for seamless integration between frontend and backend.
+5. **Bootstrap Integration**: Leveraged Bootstrap for responsive and visually appealing user interfaces, enhancing user experience.
+
+---
+
+1. **Setup Environment Configuration**:
+   - Created an environment file (`environment.ts`) to store configuration variables, including the API URL.
+   - Used the environment variable `apiUrl` to define the base URL for API requests.
+
+2. **Defined Angular Components**:
+   - Created Angular components for various functionalities:
+     - `ProductListComponent` to display a list of GameCube products.
+     - `ProductCreateComponent` to create new GameCube products.
+     - `ProductDetailsComponent` to view details of a specific GameCube product.
+     - `ProductUpdateComponent` to update existing GameCube products.
+
+3. **Configured Angular Routing**:
+   - Defined routes in the `AppRoutingModule` to navigate between different components based on URL paths.
+   - Configured routes for viewing product list, creating new product, viewing product details, and updating product.
+
+4. **Implemented Angular Services**:
+   - Created a service named `GameCubeService` to handle HTTP requests to the backend API.
+   - Implemented methods in the service to perform CRUD operations on GameCube products:
+     - `getAllGameCubes()`: Retrieves all GameCube products.
+     - `getGameCubeById(id)`: Retrieves a specific GameCube product by ID.
+     - `createGameCube(gameCube)`: Creates a new GameCube product.
+     - `updateGameCube(gameCube)`: Updates an existing GameCube product.
+     - `deleteGameCube(id)`: Deletes a GameCube product by ID.
+
+5. **Integrated with Backend API**:
+   - Configured the `apiUrl` in the environment file to point to the backend API URL.
+   - Utilized the `HttpClientModule` to send HTTP requests from Angular to the backend API.
+   - Verified API integration by testing CRUD operations using Postman.
+
+6. **Troubleshooting and Debugging**:
+   - Identified and resolved issues related to route matching and handling of HTTP requests.
+   - Ensured that frontend components and services interacted correctly with the backend API.
+  
+  ## Navbar screenshot 
+
+  
