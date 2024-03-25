@@ -13,7 +13,7 @@ _Summary provided by instructor_
 **Summary**
 
 
-- Currently I am in the proposal phase of this Milestone. 
+## UPDATE MILESTONE 5 
 
 
 - This web application must host a product
@@ -40,7 +40,9 @@ _Summary provided by instructor_
 
 | date  | Description | folders        |
 | ------ | ------ | ----------- | 
-| Milestone 1 |  For Milestone 1, you will create a project proposal that defines the functionality for the complete web application.      | Diagrams- hold all uml / wireframes / UI site maps/ UI wireframes / ER diagrams |
+| Milestone  |  For Milestone , you will create a project proposal that defines the functionality for the complete web application.      | Diagrams- hold all uml / wireframes / UI site maps/ UI wireframes / ER diagrams |
+| APP | serves as the front end angular web application for our milestone| all code for front end will be here | 
+| API | serves as the backend for our application. Our API endpoints and implementation has not changed too much however I did reorganize the structure of the directory| all code for back end api endpoint / CRUD operation | 
 
 ---
 
