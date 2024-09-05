@@ -56,45 +56,45 @@ _Summary provided by instructor_
 ### List of requirements:
 
   
-- as a user I want to add items to a shopping cart so that I can buy items from the store.
+- as a user I want to be able to add aircraft components performance metrics.
 
-- as a user I want to be able to select services so that I can modify my personal gamecube. 
+- as a user I want to be able to select an aircraft to update it with maintenance information. 
   
 
-- as a user I want to be able to select a color and have that color of gamecube become visable on the screen, so that I can purchase one based off my favorite color. 
+- as a user I want to be able to add aircraft to our hangar spaces whenever a new aircraft comes in for acceptance. 
 
 
-- as a user I want to be able to email to business so that I can ensure they have gotten my device for repair/ modification services.
+- as a user I want to be able to veiw and update graphs that give a visual display of maintenance and performance metrics such as maintenance down time; flight hours; engine hours, etc.
  
 
 ---
 
 ### Rest API 
 
-- Get All GameCubes
-  - Endpoint: /gamecubes
+- Get All aircraft
+  - Endpoint: /aircrafts
   - HTTP Method: GET
   - Description: Retrieve a list of all GameCubes available in the store.
 
-- Get a Specific GameCube
-  - Endpoint: /gamecubes/{gameCubeId}
+- Get a Specific aircraft
+  - Endpoint: /aircrafts/{AircraftId}
   - HTTP Method: GET
   - Description: Retrieve details of a specific GameCube identified by its unique ID.
 
-- Add a New GameCube
-  - Endpoint: /gamecubes
+- Add a New aircraft
+  - Endpoint: /aircrafts
   - HTTP Method: POST
-  - Description: Add a new GameCube to the store's inventory. The request body should contain the details of the new GameCube.
+  - Description: Add a new Aircraft to the maintenance centers inventory. The request body should contain the details of the new aircraft.
 
 - Update a GameCube
-  - Endpoint: /gamecubes/{gameCubeId}
+  - Endpoint: /aircrafts/{AircraftId}
   - HTTP Method: PUT
-  - Description: Update the details of a specific GameCube identified by its unique ID. The request body should contain the updated information.
+  - Description: Update the details of a specific aircarft identified by its unique ID. The request body should contain the updated information.
 
 - Remove a GameCube
-  - Endpoint: /gamecubes/{gameCubeId}
+  - Endpoint: /aircrafts/{AircraftId}
   - HTTP Method: DELETE
-  - Description: Remove a specific GameCube from the store's inventory identified by its unique ID.
+  - Description: Remove a specific aircraft from the store's inventory identified by its unique ID.
 ---
 
 ### Postman API documentation: https://documenter.getpostman.com/view/32764813/2sA2rCU2Sb
