@@ -1,7 +1,7 @@
-<div align="center"> ### Owen Lindsey </div>
-<div align="center"> ### Professor Estey </div>
-<div align="center"> ### CST-391</div>
-<div align="center"> ### 1/14/2024</div>
+<div align="center">  Owen Lindsey </div>
+<div align="center">  Professor Sparks, James </div>
+<div align="center">   CST-391</div>
+<div align="center">  09/05/2024</div>
 
 ---
 
