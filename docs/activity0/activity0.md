@@ -2,7 +2,9 @@
 <div align="center"> ### Professor Estey </div>
 <div align="center"> ### CST-391</div>
 <div align="center"> ### 1/14/2024</div>
+
 ---
+
 1. **NodeJS "Hello World" Application screen shot.**
  This screenshot shows the app.js running in the integrated terminal. 
 - ![app.js](https://github.com/omniV1/CST-391/blob/main/Screenshot%202024-01-06%20203452.png) 
