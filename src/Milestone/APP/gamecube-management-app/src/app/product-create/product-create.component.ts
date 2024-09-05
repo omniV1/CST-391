@@ -2,13 +2,9 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { GameCubeService } from '../service/gamecube.service';
-import { CommonModule } from '@angular/common'; 
-import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-product-create',
-  standalone: true, 
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './product-create.component.html',
   styleUrls: ['./product-create.component.css']
 })

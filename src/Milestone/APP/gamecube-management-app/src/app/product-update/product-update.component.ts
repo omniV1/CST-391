@@ -1,58 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { GameCubeService } from '../service/gamecube.service';
-import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
+import { GameCube } from '../models/gamecube.model';
 
 @Component({
   selector: 'app-product-update',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './product-update.component.html',
   styleUrls: ['./product-update.component.css']
 })
 export class ProductUpdateComponent implements OnInit {
-  productForm: FormGroup;
+  successMessage: string = '';
+  errorMessage: string = '';
+  gameCube: GameCube = { id: 0, description: '', price: 0, color: '', quantity: 0, modelNumber: '' };
 
   constructor(
-    private fb: FormBuilder,
-    private gameCubeService: GameCubeService,
+    private route: ActivatedRoute,
     private router: Router,
-    private route: ActivatedRoute
-  ) {
-    this.productForm = this.fb.group({
-      id: [''],
-      description: ['', [Validators.required]],
-      price: ['', [Validators.required]],
-      color: ['', [Validators.required]],
-      quantity: ['', [Validators.required]],
-      modelNumber: ['', [Validators.required]],
-    });
-  }
+    private gameCubeService: GameCubeService
+  ) {}
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.gameCubeService.getGameCubeById(id).subscribe({
-      next: (gameCube) => {
-        this.productForm.patchValue(gameCube);
-      },
-      error: (err) => {
-        console.error(err);
-      },
-    });
-  }
-
-  onSubmit(): void {
-    if (this.productForm.valid) {
-      this.gameCubeService.updateGameCube(this.productForm.value).subscribe({
-        next: () => {
-          this.router.navigate(['/products']);
+    const id = this.route.snapshot.params['id'];
+    if (id) {
+      this.gameCubeService.getGameCubeById(id).subscribe({
+        next: (data) => {
+          this.gameCube = data;
         },
         error: (err) => {
           console.error(err);
-        },
+          this.errorMessage = 'Failed to load GameCube';
+        }
       });
     }
+  }
+
+  onUpdate(): void {
+    this.gameCubeService.updateGameCube(this.gameCube).subscribe({
+      next: () => {
+        this.successMessage = 'GameCube updated successfully!';
+        this.router.navigate(['/products']);
+      },
+      error: (err) => {
+        console.error(err);
+        this.errorMessage = 'Failed to update GameCube';
+      }
+    });
   }
 }

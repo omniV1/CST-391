@@ -1,13 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { GameCube } from '../models/gamecube.model'; // Path to your model
+import { GameCube } from '../models/gamecube.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameCubeService {
-  private apiUrl = 'http://localhost:3000/gamecubes'; // URL to your API
+  private apiUrl = 'http://localhost:3000/gamecubes'; // Update this URL with your API URL
 
   constructor(private http: HttpClient) { }
 

@@ -1,39 +1,30 @@
 import { Component } from '@angular/core';
 import {
   Router,
-  Event as RouterEvent, // Alias Angular's Event as RouterEvent
+  Event as RouterEvent,
   NavigationCancel,
   NavigationEnd,
   NavigationError,
-  NavigationStart,
-  RouterOutlet
+  NavigationStart
 } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css'] // Changed from 'styleUrl' to 'styleUrls' and made it an array
 })
 export class AppComponent {
   title = 'gamecube-management-app';
+  
   constructor(private router: Router) {
-    // Subscribe to router events
-    this.router.events.subscribe((event: RouterEvent) => { // Use RouterEvent here
+    this.router.events.subscribe((event: RouterEvent) => {
       if (event instanceof NavigationStart) {
         console.log('NavigationStart:', event);
-      }
-
-      if (event instanceof NavigationEnd) {
+      } else if (event instanceof NavigationEnd) {
         console.log('NavigationEnd:', event);
-      }
-
-      if (event instanceof NavigationError) {
+      } else if (event instanceof NavigationError) {
         console.log('NavigationError:', event);
-      }
-
-      if (event instanceof NavigationCancel) {
+      } else if (event instanceof NavigationCancel) {
         console.log('NavigationCancel:', event);
       }
     });

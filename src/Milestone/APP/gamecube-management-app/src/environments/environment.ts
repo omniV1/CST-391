@@ -1,5 +1,4 @@
 export const environment = {
-    production: false,
-    // Add any other environment-specific properties here
-  };
-  
+  production: false,
+  apiUrl: 'http://localhost:3000' // Your development API URL
+};
