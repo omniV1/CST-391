@@ -1,7 +1,7 @@
-###<div align="center"> Owen Lindsey </div>
-###<div align="center"> Professor Estey </div>
-###<div align="center"> CST-391</div>
-###<div align="center"> 1/14/2024</div>
+<div align="center"> ### Owen Lindsey </div>
+<div align="center"> ### Professor Estey </div>
+<div align="center"> ### CST-391</div>
+<div align="center"> ### 1/14/2024</div>
 ---
 1. **NodeJS "Hello World" Application screen shot.**
  This screenshot shows the app.js running in the integrated terminal. 
