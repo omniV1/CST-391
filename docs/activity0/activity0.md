@@ -34,5 +34,3 @@ This screenshot will show our express server written in typescript with provided
 
  - ![terminal](https://github.com/omniV1/CST-391/blob/main/npm-v%20node-v.png)
  - ---
- github page for photos if img link broken 
- [Owen's github](https://github.com/omniV1/CST-391)
