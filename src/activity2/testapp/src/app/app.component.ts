@@ -9,6 +9,6 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'Gamecube Repair and Modification store';
-  message = 'Welcome to the store!';
+  title = 'Aircraft Maintenance Center';
+  message = 'Maintenance Matters!';
 }
